@@ -1,0 +1,13 @@
+<%= form_with model: @station do |form| %>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name%>
+    <% @station.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

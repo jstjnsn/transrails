@@ -1,0 +1,11 @@
+<h1>Stations</h1>
+
+<ul>
+  <% @stations.each do |station| %>
+    <li>
+      <%= link_to station.name, station %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Station", new_station_path %>
